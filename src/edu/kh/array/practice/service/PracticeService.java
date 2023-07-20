@@ -110,6 +110,10 @@ public class PracticeService {
 	
 	public void practice5() {
 		
+		// 문자열을 입력 받아 문자 하나하나를 배열에 넣고 검색할 문자가 문자열에 몇 개 들어가 있는지
+		// 개수와 몇 번째 인덱스에 위치하는지 인덱스를 출력하세요.
+		
+		
 	}
 	
 	public void practice6() {
