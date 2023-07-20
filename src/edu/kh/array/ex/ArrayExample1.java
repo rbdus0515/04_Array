@@ -211,6 +211,159 @@ public class ArrayExample1 {
 		System.out.println(Arrays.toString(arr3));
 	}
 	
+	public void ex6() {
+		
+		// 점심 메뉴 뽑기 프로그램
+		
+		String[] food = {"김밥","라면","섭웨","고기","국밥","파스타"};
+		
+		System.out.println("오늘의 메뉴는 : " + food[ (int)(Math.random() * 6)]);
+		
+		// 0.0 <= x <= 1.0
+		// 0.0 <= x * 6 <= 6.0
+		// 0.0 <= (int) (x * 6)<= 6
+		// -> 0 , 1 , 2 , 3 , 4 , 5
+		
+	
+	
+	}
+	
+	public void ex7() {
+		
+		// 배열을 이용한 검색
+		
+		// 입력 받은 정수가 배열에 있는지 없는지 확인
+		// 만약 있다면 몇번 인덱스에 존재하는지 출력
+		
+		int[] arr = {100,200,300,400,500,600,700,800,900,1000};
+		
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.print("정수 입력 : ");
+		int input = sc.nextInt();
+		
+		// 신호를 나타내기 위한 변수
+		// flag == false : 일치하는 값이 존재하지 않음
+		// flag == true : 일치하는 값이 존재
+		
+		boolean flag = false; // 검사 전에는 없다고 가정
+		 
+		// arr 배열 요소 순차 접근(반복 접근)
+		for(int i = 0; i < arr.length; i++) {
+			
+			if(arr[i] == input) {
+				System.out.println(i + "번째 인덱스에 존재");
+				
+				flag = true; // 일치하는 값이 있으므로 true로 변경
+			}
+		}
+		
+		// flag 상태를 검사
+		if( !flag ) { // flag == false
+			System.out.println("존재하지 않음");
+		}
+		
+		
+	}
+	
+	public void ex8() {
+		
+		// 입력 받은 값과 일치 값이 잇으면 인덱스 번호 출력
+		// 없으면 "존재하지 않음"
+		
+		String[] arr = {"사과","딸기","바나나","키위","멜론","아보카도"};
+		
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.print("과일 입력 : ");
+		String input = sc.next();
+		
+		boolean flag = false;
+		
+		for(int i = 0; i < arr.length; i++) {
+			
+			if(arr[i].equals(input)) { // String 비교시 equals() 사용
+				System.out.println(i + "번쨰 인덱스에 존재");
+				flag = true;
+			}
+		}
+		
+		if(!flag) {
+			System.out.println("존재하지 않음");
+		}
+		
+	}
+	
+	public void ex9() {
+		
+		// 1. 문자열을 입력 받아 한 글자씩 잘라내어 char 배열에 순서대로 저장
+		// 2. 문자 하나를 입력 받아 일치하는 문자가 char 배열에 몇개 존재하는지 확인
+		// 3. 단, 일치하는 문자가 없을 경우 " 존재하지 않습니다. " 출력
+		
+		// [사용해야 되는 기술, 기능]
+		
+		// 1) 배열 검색
+		// 2) String/length()  :  문자열의 길이
+		// 		ex) "Hello".length() -> 5
+		
+		// 3) String.charAt(index)  :  문자열에서 특정 index에 위치한 문자 하나를 얻어옴.
+		// 		ex) "Hello".charAt(1) ->  'e'
+		//    		 01234
+		
+		// 4) count (숫자 세기)
+		
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.print("문자열 입력 : ");
+		String input = sc.nextLine(); // 한줄(띄어쓰기 포함) 입력받기
+		
+		// 1. 문자열을 입력 받아 한 글자씩 잘라내어 char 배열에 순서대로 저장
+		char[] arr = new char[input.length()];
+		
+		for(int i = 0; i < arr.length; i++) {
+			arr[i] = input.charAt(i);
+			// arr[i]에 입력받은 문자열 중 i번째 문자를 대입
+			
+		}
+		
+		System.out.println(Arrays.toString(arr));
+		
+		// 2. 문자 하나를 입력 받아 일치하는 문자가 char 배열에 몇개 존재하는지 확인
+		
+		System.out.print("검색할 문자 입력 : ");
+		char ch = sc.next().charAt(0);
+		
+		int count = 0; // 같은 글자 개수를 세기 위한 변수
+		
+		for(int i = 0; i < arr.length; i++) {
+			if(arr[i] == ch) {
+				// arr[i] 값과 검색할 문자 ch가 같은 경우
+				// -> 카운트
+				count++;
+			}
+		}
+		
+		// 결과 출력
+		
+
+		if(count > 0) {
+			System.out.println(count + "개 있음");
+		} else {
+			// 3. 단, 일치하는 문자가 없을 경우 " 존재하지 않습니다. " 출력
+			System.out.println("존재하지 않음");
+		}
+		
+
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	}
 	
 	
 	
