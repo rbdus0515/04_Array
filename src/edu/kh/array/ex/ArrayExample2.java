@@ -27,7 +27,7 @@ public class ArrayExample2 {
 	}
 
 	// 깊은 복사 (deepCopy)
-	// -> 같은 자료혀으이 새로운 배열을 만들어서
+	// -> 같은 자료형이 새로운 배열을 만들어서
 	//    기존 배열의 데이터를 모두 복사하는 방법
 	
 	public void deepCopy() {

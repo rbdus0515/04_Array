@@ -7,11 +7,11 @@ public class PracticeRun {
 		PracticeService arrayPT = new PracticeService();
 		
 		//arrayPT.practice1();
-		//arrayPT.practice2(); //다시
+		//arrayPT.practice2(); 
 		//arrayPT.practice3();
-		arrayPT.practice4();
-		//arrayPT.practice5();
-		//arrayPT.practice6();
+		//arrayPT.practice4();
+		//arrayPT.practice5(); //다시 인덱스 위치 print
+		arrayPT.practice6();
 		//arrayPT.practice7();
 		//arrayPT.practice8();
 		//arrayPT.practice9();
