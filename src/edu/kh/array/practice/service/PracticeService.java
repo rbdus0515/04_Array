@@ -191,7 +191,6 @@ public class PracticeService {
 		        System.out.print(ch);
 	}
 
-	
 	public void practice8() {
 		
 		// 3이상인 홀수를 입력 받아 배열의 중간까지는 1부터 1씩 증가하여 오름차순으로 값을 넣고,
@@ -208,10 +207,25 @@ public class PracticeService {
 				break;
 			}
 		}
+		int num = new int[input];
+		for(int i = 0; i < input; i++) {
+			num[i] = i+1;
+		}
 		
 	}
 	
 	public void practice9() {
+		
+		// 10개의 값을 저장할 수 있는 정수형 배열을 선언 및 할당하고,
+		// 1~10 사이의 난수를 발생시켜 배열에 초기화한 후 출력하세요.
+		
+		int[] num = new int[10];
+		
+		for(int i = 0; i < num.length; i++) {
+			int random = (int)(Math.random() * 10);
+			int num = random;
+		}
+		
 		
 	}
 	

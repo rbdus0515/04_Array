@@ -13,8 +13,8 @@ public class PracticeRun {
 		//arrayPT.practice5(); //다시
 		//arrayPT.practice6();
 		//arrayPT.practice7();
-		arrayPT.practice8();
-		//arrayPT.practice9();
+		//arrayPT.practice8(); // 다시
+		arrayPT.practice9();
 		//arrayPT.practice10();
 		//arrayPT.practice11();
 		//arrayPT.practice12();
