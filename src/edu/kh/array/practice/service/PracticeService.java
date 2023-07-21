@@ -121,6 +121,8 @@ public class PracticeService {
 		System.out.print("문자열 : ");
 		String input = sc.next();
 		
+		char[] ch1 = new char[input.length()];
+		
 		System.out.print("문자 : ");
 		char ch2 = sc.next().charAt(0);
 		
@@ -128,32 +130,12 @@ public class PracticeService {
 		
 		boolean flag = false;
 		
-		char[] ch1 = new char[input.length()];
-		
 		for(int i = 0; i < ch1.length; i++) {
-			ch1[i] = input.charAt(i);
-			if(input.equals(ch2)) {
-				System.out.println( i + "번쨰");
-				flag = true;
-				
+			if(ch1[i] == ch2) {
+				count ++;
 			}
 		}
-		
-		
-		for(int j = 0; j < ch1.length; j++) {
-			if(ch1[j] == ch2) {
-				count++;
-			}
-		}
-		
-		if(count > 0) {
-			System.out.println( ch2 + " 개수 : " + count);
-		}
-		
-		
-		
-	
-		
+		System.out.println(count);
 		
 	}
 	
@@ -186,17 +168,46 @@ public class PracticeService {
 	}
 	
 	public void practice7() {
-
-		        
-		    }
 		
-
-
+		// 주민등록번호 번호를 입력 받아 성별을 나타내는 숫자 이후부터 *로 가리고 출력하세요.
 		
+		System.out.print("주민등록번호(-포함) : ");
+		String input = sc.nextLine();
 		
-	
+		char[] ch = new char [input.length()];
+		
+		for(int i = 0; i < ch.length; i++) {
+			ch[i] = input.charAt(i);
+		}
+		System.out.println(Arrays.toString(ch));
+		
+		for(int i = 0; i < ch.length; i++) {
+			if(i < 8) {
+				ch[i] = input.charAt(i);
+			} else {
+				ch[i] = '*';
+			}
+		}
+		        System.out.print(ch);
+	}
+
 	
 	public void practice8() {
+		
+		// 3이상인 홀수를 입력 받아 배열의 중간까지는 1부터 1씩 증가하여 오름차순으로 값을 넣고,
+		// 중간 이후부터 끝까지는 1씩 감소하여 내림차순으로 값을 넣어 출력하세요.
+		// 단, 입력한 정수가 홀수가 아니거나 3 미만일 경우 “다시 입력하세요”를 출력하고
+		// 다시 정수를 받도록 하세요.
+		
+		int input = 0;
+		
+		while(true) {
+			System.out.print("3이상인 홀수 : ");
+			input = sc.nextInt();
+			if(input % 2 == 1 && input > 0) {
+				break;
+			}
+		}
 		
 	}
 	

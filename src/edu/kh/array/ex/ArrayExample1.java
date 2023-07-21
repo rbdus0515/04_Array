@@ -205,7 +205,7 @@ public class ArrayExample1 {
 		System.out.println(Arrays.toString(arr2));
 		
 		// 배열 선언과 동시에 (할당 및) 초기화
-		char[] arr3 = {'A','B','c','D','E'};
+		char[] arr3 = {'A','B','C','D','E'};
 		// {} 중괄호는 배열의 리터럴 표기법
 		
 		System.out.println(Arrays.toString(arr3));
@@ -224,7 +224,7 @@ public class ArrayExample1 {
 		// 0.0 <= (int) (x * 6)<= 6
 		// -> 0 , 1 , 2 , 3 , 4 , 5
 		
-	
+		
 	
 	}
 	
